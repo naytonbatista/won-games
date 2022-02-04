@@ -40,26 +40,31 @@ const Home = ({
         <BannerSlider items={banners} />
       </S.SectionBanner>
     </Container>
+
+    <S.SectionNews>
+      <Container>
+        <Heading lineLeft lineColor="secondary" color="black">
+          News
+        </Heading>
+        <GameCardSlider items={newGames} color="black" />
+      </Container>
+    </S.SectionNews>
     <Container>
-      <Heading lineLeft lineColor="secondary" color="black">
-        News
-      </Heading>
-      <GameCardSlider items={newGames} color="black" />
-    </Container>
-    <Container>
-      <Heading lineLeft lineColor="secondary">
-        Most Popular
-      </Heading>
-      <Highlight {...mostPopularHighLight} />
-      <GameCardSlider items={mostPopularGames} />
-    </Container>
-    <Container>
-      <Heading lineLeft lineColor="secondary">
-        Upcomming
-      </Heading>
-      <GameCardSlider items={upcommingGames} />
-      <Highlight {...upcommingHighlight} />
-      <GameCardSlider items={upcommingMoreGames} />
+      <S.SectionMostPopular>
+        <Heading lineLeft lineColor="secondary">
+          Most Popular
+        </Heading>
+        <Highlight {...mostPopularHighLight} />
+        <GameCardSlider items={mostPopularGames} />
+      </S.SectionMostPopular>
+      <S.SectionUpComming>
+        <Heading lineLeft lineColor="secondary">
+          Upcomming
+        </Heading>
+        <GameCardSlider items={upcommingGames} />
+        <Highlight {...upcommingHighlight} />
+        <GameCardSlider items={upcommingMoreGames} />
+      </S.SectionUpComming>
     </Container>
     <Container>
       <Heading lineLeft lineColor="secondary">

@@ -8,13 +8,13 @@ import highLightMock from 'components/Highlight/mock'
 
 const props = {
   banners: bannersMock,
-  newGames: gamesMock,
+  newGames: [gamesMock[0]],
   mostPopularHighLight: highLightMock,
-  mostPopularGames: gamesMock,
-  upcommingGames: gamesMock,
+  mostPopularGames: [gamesMock[0]],
+  upcommingGames: [gamesMock[0]],
   upcommingHighlight: highLightMock,
-  upcommingMoreGames: gamesMock,
-  freeGames: gamesMock,
+  upcommingMoreGames: [gamesMock[0]],
+  freeGames: [gamesMock[0]],
   freeHighlight: highLightMock
 }
 
@@ -54,7 +54,7 @@ describe('<Home />', () => {
     renderWithTheme(<Home {...props} />)
 
     expect(screen.getAllByText(/defy death 1/i)).toHaveLength(1)
-    expect(screen.getAllByText(/population zero/i)).toHaveLength(20)
+    expect(screen.getAllByText(/population zero/i)).toHaveLength(5)
     expect(screen.getAllByText(/red dead is back!/i)).toHaveLength(3)
   })
 })
