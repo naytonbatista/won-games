@@ -31,7 +31,6 @@ export const Default: Story<CheckboxProps> = (args) => (
         name="category"
         label="Adventure"
         labelFor="adventure"
-        isChecked
         {...args}
       />
     </div>
@@ -40,7 +39,6 @@ export const Default: Story<CheckboxProps> = (args) => (
         name="category"
         label="Strategy"
         labelFor="strategy"
-        isChecked
         {...args}
       />
     </div>
