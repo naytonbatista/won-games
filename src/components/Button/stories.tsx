@@ -4,7 +4,7 @@ import Button from '.'
 import { AddShoppingCart } from '@styled-icons/material-outlined/AddShoppingCart'
 
 export default {
-  title: 'Button',
+  title: 'Form/Button',
   component: Button,
   argTypes: {
     children: {
