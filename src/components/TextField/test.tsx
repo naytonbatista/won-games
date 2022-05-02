@@ -58,4 +58,41 @@ describe('<TextField />', () => {
     })
     expect(onInputChange).toHaveBeenCalledWith(text)
   })
+
+  it('shouldtn changes its value when disabled', async () => {
+    const onInputChange = jest.fn()
+
+    renderWithTheme(
+      <TextField
+        onInputChange={onInputChange}
+        label="textField"
+        name="textField"
+        id="TextField"
+        disabled
+      />
+    )
+
+    const input = screen.getByRole('textbox')
+    expect(input).toBeDisabled()
+
+    const text = 'This is my new text'
+    userEvent.type(input, text)
+
+    await waitFor(() => {
+      expect(input).not.toHaveValue(text)
+    })
+    expect(onInputChange).not.toHaveBeenCalledWith(text)
+  })
+
+  it('shouldtn acessible by tab when disabled', async () => {
+    renderWithTheme(
+      <TextField label="TextField" name="TextField" id="TextField" disabled />
+    )
+
+    const input = screen.getByLabelText('TextField')
+    expect(document.body).toHaveFocus()
+
+    userEvent.tab()
+    expect(input).not.toHaveFocus()
+  })
 })
