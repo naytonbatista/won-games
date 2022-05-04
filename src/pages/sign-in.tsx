@@ -1,5 +1,5 @@
 import Auth from 'templates/Auth'
 
 export default function SigIn() {
-  return <Auth />
+  return <Auth title="Sign In">Children</Auth>
 }
