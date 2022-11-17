@@ -30,10 +30,6 @@ describe('<Home />', () => {
     ).toBeInTheDocument()
 
     expect(screen.getAllByRole('img', { name: /won games/i })).toHaveLength(2)
-  })
-
-  it('should render sections', () => {
-    renderWithTheme(<Home {...props} />)
 
     expect(screen.getByRole('heading', { name: /news/i })).toBeInTheDocument()
 
@@ -48,10 +44,6 @@ describe('<Home />', () => {
     expect(
       screen.getByRole('heading', { name: /free games/i })
     ).toBeInTheDocument()
-  })
-
-  it('should render section elements', () => {
-    renderWithTheme(<Home {...props} />)
 
     expect(screen.getAllByText(/defy death 1/i)).toHaveLength(1)
     expect(screen.getAllByText(/population zero/i)).toHaveLength(5)
