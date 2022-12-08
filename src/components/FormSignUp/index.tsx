@@ -4,7 +4,7 @@ import TextField from 'components/TextField'
 import Link from 'next/link'
 import { FormWrapper, FormLink } from 'components/Form'
 
-const FormSignIn = () => (
+const FormSignUp = () => (
   <FormWrapper>
     <form>
       <TextField
@@ -45,4 +45,4 @@ const FormSignIn = () => (
   </FormWrapper>
 )
 
-export default FormSignIn
+export default FormSignUp
