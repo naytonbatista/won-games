@@ -1,4 +1,5 @@
 import { Container } from 'components/Container'
+import { Divider } from 'components/Divider'
 import GameCard, { GameCardProps } from 'components/GameCard'
 import { Grid } from 'components/Grid'
 import Heading from 'components/Heading'
@@ -27,6 +28,7 @@ const Wishlist = ({
           <GameCard key={index} {...game} />
         ))}
       </Grid>
+      <Divider />
     </Container>
     <ShowCase
       title="You may like this games"
