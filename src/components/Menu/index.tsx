@@ -27,11 +27,12 @@ const Menu = ({ userName }: MenuProps) => {
         <Logo hideOnMobile />
       </S.LogoWrapper>
 
-      <MediaMatch greaterThan="medium"></MediaMatch>
-      <S.MenuNav>
-        <S.MenuLink href="#">Home</S.MenuLink>
-        <S.MenuLink href="#">Explorer</S.MenuLink>
-      </S.MenuNav>
+      <MediaMatch greaterThan="medium">
+        <S.MenuNav>
+          <S.MenuLink href="#">Home</S.MenuLink>
+          <S.MenuLink href="#">Explorer</S.MenuLink>
+        </S.MenuNav>
+      </MediaMatch>
       <S.MenuGroup>
         <S.IconWrapper>
           <SearchIcon aria-label="search" />
